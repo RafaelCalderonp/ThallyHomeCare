@@ -10,7 +10,7 @@ const products = [
     description:
       "Fragancia floral con notas doradas de vainilla y ámbar, en elegante frasco de cristal. Larga duración.",
     price: 45.99,
-    imageUrl: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800",
+    imageUrl: "/products/perfume-golden-bloom.jpg",
     category: "Perfumería",
     stock: 15,
   },
@@ -19,7 +19,7 @@ const products = [
     description:
       "Labial de acabado mate en tono rosa intenso, fórmula de larga duración e hidratante.",
     price: 14.99,
-    imageUrl: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800",
+    imageUrl: "/products/labial-rose-kiss.jpg",
     category: "Maquillaje",
     stock: 30,
   },
@@ -28,7 +28,7 @@ const products = [
     description:
       "Crema hidratante con manteca de karité y vitamina E, para una piel suave y luminosa.",
     price: 22.5,
-    imageUrl: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+    imageUrl: "/products/crema-silk-glow.jpg",
     category: "Cuidado de la piel",
     stock: 20,
   },
@@ -37,7 +37,7 @@ const products = [
     description:
       "Sérum concentrado antioxidante que unifica el tono de la piel y aporta luminosidad.",
     price: 28.0,
-    imageUrl: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+    imageUrl: "/products/serum-vitamina-c.jpg",
     category: "Cuidado de la piel",
     stock: 18,
   },
@@ -46,7 +46,7 @@ const products = [
     description:
       "Bruma corporal perfumada de flores blancas, ligera y refrescante para uso diario.",
     price: 18.9,
-    imageUrl: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800",
+    imageUrl: "/products/body-mist-blossom.jpg",
     category: "Perfumería",
     stock: 25,
   },
@@ -55,7 +55,7 @@ const products = [
     description:
       "Loción corporal de rápida absorción, con aroma suave y efecto humectante todo el día.",
     price: 16.5,
-    imageUrl: "https://images.unsplash.com/photo-1601049676869-702ea24cfd58?w=800",
+    imageUrl: "/products/locion-corporal.jpg",
     category: "Cuidado personal",
     stock: 22,
   },
@@ -75,7 +75,9 @@ async function main() {
 
   for (const product of products) {
     const existing = await prisma.product.findFirst({ where: { name: product.name } });
-    if (!existing) {
+    if (existing) {
+      await prisma.product.update({ where: { id: existing.id }, data: product });
+    } else {
       await prisma.product.create({ data: product });
     }
   }
