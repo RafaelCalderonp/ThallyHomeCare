@@ -128,13 +128,11 @@ usando la `DATABASE_URL` que te da la base de datos de Render.
    producción como el de previews, separados por coma) y vuelve a desplegar
    el backend.
 
-Si prefieres la CLI en vez del dashboard, `frontend/wrangler.toml` ya define
-`pages_build_output_dir`, así que puedes desplegar con:
-```bash
-cd frontend
-npm run build
-npx wrangler pages deploy
-```
+> **Nota:** no agregues un `wrangler.toml` en `frontend/` si despliegas desde
+> el dashboard conectado a Git — Cloudflare Pages lo interpreta como
+> configuración de build y deja de inyectar las variables de entorno
+> definidas en el dashboard (`VITE_API_URL`, etc.), causando errores difíciles
+> de diagnosticar.
 
 ## Notas de producción
 
