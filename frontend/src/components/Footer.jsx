@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { WhatsAppButton, InstagramButton } from "./SocialButtons";
 
 export default function Footer() {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -40,27 +41,11 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-brand-300 font-semibold mb-2">Contacto</h4>
-          <p className="text-sm">
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent-400"
-            >
-              WhatsApp: +{whatsappNumber}
-            </a>
-          </p>
-          <p className="text-sm">
-            <a
-              href={`https://instagram.com/${instagramHandle}`}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent-400"
-            >
-              Instagram: @{instagramHandle}
-            </a>
-          </p>
+          <h4 className="text-brand-300 font-semibold mb-3">Contacto</h4>
+          <div className="flex gap-3">
+            <WhatsAppButton number={whatsappNumber} />
+            <InstagramButton handle={instagramHandle} />
+          </div>
         </div>
       </div>
       <div className="border-t border-neutral-800 text-center text-xs text-neutral-500 py-4">
