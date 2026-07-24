@@ -15,7 +15,13 @@ export default function Catalog() {
   useEffect(() => {
     api
       .get("/products")
-      .then(({ data }) => setProducts(data))
+      .then(({ data }) => {
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          setError("No se pudo cargar el catálogo. Intenta de nuevo más tarde.");
+        }
+      })
       .catch(() => setError("No se pudo cargar el catálogo. Intenta de nuevo más tarde."))
       .finally(() => setLoading(false));
   }, []);
