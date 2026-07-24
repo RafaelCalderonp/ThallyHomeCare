@@ -17,6 +17,7 @@ import AdminLogin from "./pages/admin/Login";
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminProducts from "./pages/admin/AdminProducts";
 import AdminOrders from "./pages/admin/AdminOrders";
+import AdminUsers from "./pages/admin/AdminUsers";
 
 function PublicLayout({ children }) {
   return (
@@ -55,6 +56,7 @@ function App() {
       >
         <Route path="productos" element={<AdminProducts />} />
         <Route path="pedidos" element={<AdminOrders />} />
+        <Route path="usuarios" element={<AdminUsers />} />
       </Route>
     </Routes>
   );

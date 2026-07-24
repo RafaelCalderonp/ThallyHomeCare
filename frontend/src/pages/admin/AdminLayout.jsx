@@ -20,6 +20,9 @@ export default function AdminLayout() {
           <NavLink to="/admin/pedidos" className={linkClass}>
             Pedidos
           </NavLink>
+          <NavLink to="/admin/usuarios" className={linkClass}>
+            Usuarios
+          </NavLink>
         </nav>
         <button
           onClick={logout}
