@@ -158,14 +158,14 @@ export default function Cart() {
             <button
               onClick={handleStripeCheckout}
               disabled={loading !== null}
-              className="w-full px-5 py-3 rounded-md bg-brand-600 text-white font-medium hover:bg-brand-700 transition-colors disabled:opacity-50"
+              className="w-full px-5 py-3 rounded-md bg-brand-500 text-black font-semibold hover:bg-brand-400 transition-colors disabled:opacity-50"
             >
               {loading === "online" ? "Redirigiendo..." : "Pagar en línea (tarjeta)"}
             </button>
             <button
               onClick={handleWhatsappOrder}
               disabled={loading !== null}
-              className="w-full px-5 py-3 rounded-md bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors disabled:opacity-50"
+              className="w-full px-5 py-3 rounded-md bg-accent-600 text-white font-medium hover:bg-accent-700 transition-colors disabled:opacity-50"
             >
               {loading === "whatsapp" ? "Enviando..." : "Pedir por WhatsApp"}
             </button>

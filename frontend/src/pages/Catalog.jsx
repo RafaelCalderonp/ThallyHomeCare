@@ -28,10 +28,9 @@ export default function Catalog() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-brand-900">Catálogo de productos</h1>
+      <h1 className="font-display text-3xl font-bold text-brand-700">Catálogo de productos</h1>
       <p className="mt-2 text-slate-600">
-        Equipo médico y de cuidado personal para el hogar, listo para pedir en línea o por
-        WhatsApp.
+        Perfumería, maquillaje y cuidado personal, listo para pedir en línea o por WhatsApp.
       </p>
 
       {!loading && !error && (
@@ -42,7 +41,7 @@ export default function Catalog() {
               onClick={() => setCategory(c)}
               className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
                 category === c
-                  ? "bg-brand-600 text-white border-brand-600"
+                  ? "bg-brand-500 text-black border-brand-500 font-medium"
                   : "bg-white text-slate-600 border-slate-200 hover:border-brand-300"
               }`}
             >

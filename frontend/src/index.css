@@ -1,18 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50: #eef7f6;
-  --color-brand-100: #d3ebe8;
-  --color-brand-200: #a7d7d1;
-  --color-brand-300: #79c0b7;
-  --color-brand-400: #4aa89c;
-  --color-brand-500: #2f8d80;
-  --color-brand-600: #237167;
-  --color-brand-700: #1d5952;
-  --color-brand-800: #19453f;
-  --color-brand-900: #163a35;
+  /* Dorado — color principal de marca (botones, enlaces, acentos) */
+  --color-brand-50: #fdf9ec;
+  --color-brand-100: #faf0cf;
+  --color-brand-200: #f3dfa0;
+  --color-brand-300: #e9c96a;
+  --color-brand-400: #dcb44a;
+  --color-brand-500: #c99a2e;
+  --color-brand-600: #a97f22;
+  --color-brand-700: #86631b;
+  --color-brand-800: #6b4f18;
+  --color-brand-900: #4a370f;
+
+  /* Rosa — color secundario de marca (detalles, resaltados) */
+  --color-accent-50: #fdf1f7;
+  --color-accent-100: #fbe1ee;
+  --color-accent-200: #f8c2dd;
+  --color-accent-300: #f398c2;
+  --color-accent-400: #ec6aa3;
+  --color-accent-500: #e0428a;
+  --color-accent-600: #c22d70;
+  --color-accent-700: #9c2159;
+  --color-accent-800: #7d1c49;
+  --color-accent-900: #66193d;
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #fdfaf5;
 }

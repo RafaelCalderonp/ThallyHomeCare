@@ -25,10 +25,10 @@ export default function ProductCard({ product }) {
         </Link>
         <p className="text-sm text-slate-500 line-clamp-2 flex-1">{product.description}</p>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-lg font-bold text-brand-800">${product.price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-brand-700">${product.price.toFixed(2)}</span>
           <button
             onClick={() => addItem(product, 1)}
-            className="px-3 py-1.5 rounded-md bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
+            className="px-3 py-1.5 rounded-md bg-brand-500 text-black text-sm font-semibold hover:bg-brand-400 transition-colors"
           >
             Agregar
           </button>

@@ -66,7 +66,7 @@ export default function ProductDetail() {
               setTimeout(() => setAdded(false), 2000);
             }}
             disabled={product.stock <= 0}
-            className="px-5 py-2.5 rounded-md bg-brand-600 text-white font-medium hover:bg-brand-700 transition-colors disabled:opacity-50"
+            className="px-5 py-2.5 rounded-md bg-brand-500 text-black font-semibold hover:bg-brand-400 transition-colors disabled:opacity-50"
           >
             Agregar al carrito
           </button>
