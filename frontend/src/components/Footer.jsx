@@ -8,9 +8,7 @@ export default function Footer() {
     <footer className="bg-black text-neutral-300 mt-16 border-t border-brand-900">
       <div className="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-3">
         <div>
-          <h3 className="font-display text-brand-300 font-semibold mb-2 text-lg">
-            Thally <span className="text-accent-400">Cosmetic</span>
-          </h3>
+          <img src="/logo.jpg" alt="Thally Home & Care Cosmetic" className="h-16 w-auto rounded mb-3" />
           <p className="text-sm text-neutral-400">
             Perfumería, maquillaje y cuidado personal para realzar tu belleza, con la calidez y
             confianza que mereces.

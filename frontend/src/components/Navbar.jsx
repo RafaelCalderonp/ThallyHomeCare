@@ -12,14 +12,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-black/95 backdrop-blur border-b border-brand-900">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="flex items-center gap-2">
-          {/* TODO: reemplazar por <img src="/logo.png" alt="Thally Home & Care Cosmetic" className="h-10 w-auto" /> cuando se tenga el archivo del logo */}
-          <span className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-300 to-brand-600 text-black flex items-center justify-center font-bold font-display">
-            T
-          </span>
-          <span className="font-display font-semibold text-lg text-brand-300 tracking-wide">
-            Thally <span className="text-accent-400">Cosmetic</span>
-          </span>
+        <Link to="/" className="flex items-center py-1">
+          <img src="/logo.jpg" alt="Thally Home & Care Cosmetic" className="h-14 w-auto rounded" />
         </Link>
 
         <nav className="hidden sm:flex items-center gap-1">
