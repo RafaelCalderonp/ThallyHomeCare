@@ -1,0 +1,35 @@
+databases:
+  - name: thallyhomecare-db
+    databaseName: thallyhomecare
+    plan: free
+
+services:
+  - type: web
+    name: thallyhomecare-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: thallyhomecare-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 4000
+      # Rellena estos valores en el dashboard de Render después del primer deploy:
+      - key: CORS_ORIGIN
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: WHATSAPP_NUMBER
+        sync: false
