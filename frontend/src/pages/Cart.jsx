@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { api } from "../api/client";
+import PaymentBadges from "../components/PaymentBadges";
 
 export default function Cart() {
   const { items, updateQuantity, removeItem, total, clearCart } = useCart();
@@ -162,6 +163,7 @@ export default function Cart() {
             >
               {loading === "online" ? "Redirigiendo..." : "Pagar en línea (tarjeta)"}
             </button>
+            <PaymentBadges />
             <button
               onClick={handleWhatsappOrder}
               disabled={loading !== null}
